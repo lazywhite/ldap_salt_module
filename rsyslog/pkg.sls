@@ -1,2 +1,3 @@
-rsyslog:
-    pkg.installed
+rsyslog-pkg:
+    pkg.installed:
+        - name: rsyslog

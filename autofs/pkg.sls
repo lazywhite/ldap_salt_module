@@ -1,2 +1,3 @@
-autofs:
-    pkg.installed
+autofs-pkg:
+    pkg.installed:
+        - name: autofs

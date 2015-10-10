@@ -4,6 +4,7 @@
         - user: root
         - group: root
         - mode: 644
+        - template: jinja
 
 /etc/pam.d/system-auth-ac:
     file.managed:
@@ -11,6 +12,7 @@
         - user: root
         - group: root
         - mode: 644
+        - template: jinja
 
 /etc/pam_ldap.conf:
     file.managed:
@@ -18,5 +20,6 @@
         - user: root
         - group: root
         - mode: 644
+        - template: jinja
         - require:
             - pkg: pam_ldap

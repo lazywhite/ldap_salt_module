@@ -1,9 +1,18 @@
 base:
     "*.local.com":
-        - vim
         - hosts
-
-    "client*":
+        - user
         - bash
+        - vim
         - pam
-        - 
+        - ssh
+        - ldap
+        - sudo
+        - pam
+        - rsyslog
+        - nsswitch
+        - nslcd
+
+    "client*.local.com":
+        - autofs
+

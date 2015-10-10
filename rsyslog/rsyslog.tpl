@@ -13,9 +13,15 @@ $ModLoad imklog   # provides kernel logging support (previously done by rklogd)
 #$ModLoad imudp
 #$UDPServerRun 514
 
+{% if grains['fqdn'] == 'ldap.local.com' %}
+# Provides TCP syslog reception
+$ModLoad imtcp
+$InputTCPServerRun 514
+{% else %}
 # Provides TCP syslog reception
 #$ModLoad imtcp
 #$InputTCPServerRun 514
+{% endif %}
 
 
 #### GLOBAL DIRECTIVES ####
@@ -59,8 +65,7 @@ uucp,news.crit                                          /var/log/spooler
 
 # Save boot messages also to boot.log
 local7.*                                                /var/log/boot.log
-local4.*                                                @@{{ pillar['bash_log_master'] }} 
-
+local4.*                                                {{ pillar['rsyslog_file'] }}
 
 # ### begin forwarding rule ###
 # The statement between the begin ... end define a SINGLE forwarding

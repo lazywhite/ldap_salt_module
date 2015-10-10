@@ -1,5 +1,10 @@
 base:
-    '*':
-        - users
+    '*.local.com':
         - vim
-        - ldap.clients
+        - ldap.client
+
+    'client*.local.com':
+        - rsyslog.agent
+
+    'ldap.local.com':
+        - rsyslog.master

@@ -44,12 +44,12 @@ timelimit 30
 # server has not been contacted for the number of seconds.
 #idle_timelimit 3600
 
-uid ldap
+uid nslcd
 gid ldap
 uri {{ pillar['ldap_uri'] }}
 base {{ pillar['ldap_base'] }}
 tls_reqcert never
 ssl on
-tls_cacertfile {{ pillar['ldap_ca'] }}
-tls_cert {{ pillar['ldap_cert'] }}
-tls_key  {{ pillar['ldap_key'] }}
+tls_cacertfile {{ pillar['tls_ca'] }}
+tls_cert {{ pillar['tls_cert'] }}
+tls_key  {{ pillar['tls_key'] }}

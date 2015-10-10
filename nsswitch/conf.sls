@@ -4,6 +4,7 @@
         - user: 0
         - group: 0
         - mode: 644
+        - template: jinja
         - require:
             - pkg: glibc
 

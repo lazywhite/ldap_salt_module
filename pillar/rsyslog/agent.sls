@@ -1,1 +1,1 @@
-log_master: 'ldap.local.com'
+rsyslog_file: '@@ldap.local.com'

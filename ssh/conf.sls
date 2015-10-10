@@ -4,5 +4,6 @@
         - user: 0
         - group: 0
         - mode: 600
+        - template: jinja
         - require:
             - pkg: openssh-server
