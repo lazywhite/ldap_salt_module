@@ -1,5 +1,6 @@
 base:
     "*.local.com":
+        - repo
         - hosts
         - user
         - bash
