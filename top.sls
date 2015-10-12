@@ -4,7 +4,6 @@ base:
         - hosts
         - user
         - bash
-        - vim
         - pam
         - ssh
         - ldap
@@ -17,3 +16,5 @@ base:
     "client*.local.com":
         - autofs
 
+    "*":
+        - vim
