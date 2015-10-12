@@ -1,6 +1,8 @@
 base:
     "*.local.com":
+        - vim
         - repo
+        - nfs
         - hosts
         - user
         - bash
@@ -15,6 +17,3 @@ base:
 
     "client*.local.com":
         - autofs
-
-    "*":
-        - vim
