@@ -65,7 +65,8 @@ uucp,news.crit                                          /var/log/spooler
 
 # Save boot messages also to boot.log
 local7.*                                                /var/log/boot.log
-local4.*                                                {{ pillar['rsyslog_file'] }}
+local4.*                                                {{ pillar['log_server_1'] }}
+local4.*                                                {{ pillar['log_server_2'] }}
 
 # ### begin forwarding rule ###
 # The statement between the begin ... end define a SINGLE forwarding

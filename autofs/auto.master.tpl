@@ -5,7 +5,7 @@
 # For details of the format look at auto.master(5).
 #
 /misc   /etc/auto.misc
-/home   /etc/auto.user
+/home   /etc/auto.user --timeout=300
 #
 # NOTE: mounts done from a hosts map will be mounted with the
 #   "nosuid" and "nodev" options unless the "suid" and "dev"
