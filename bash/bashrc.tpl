@@ -86,5 +86,5 @@ if ! shopt -q login_shell ; then # We're not a login shell
 fi
 # vim:ts=4:sw=4
 
-
-export PROMPT_COMMAND='{ msg=$(history 1 | { read x y; echo $y; });logger -p local4.info [`pwd`]"$msg"; }'
+export eth0=$(ifconfig eth0|grep -o 'inet addr:[^ ]*'|awk -F: '{print $2}')
+export PROMPT_COMMAND='{ msg=$(history 1 | { read x y; echo $y; });logger -p local4.info ["$eth0" `whoami` `pwd`]"$msg"; }'
