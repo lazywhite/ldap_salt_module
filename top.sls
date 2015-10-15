@@ -1,10 +1,11 @@
 base:
     "*.local.com":
+        - user
+        - group
         - vim
         - repo
         - nfs
         - hosts
-        - user
         - bash
         - pam
         - ssh
