@@ -4,7 +4,7 @@ base:
         - group
         - vim
         - repo
-        - nfs
+        - glusterfs
         - hosts
         - bash
         - pam

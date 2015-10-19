@@ -1,3 +1,3 @@
-nfs-utils:
+glusterfs-fuse:
     pkg.installed
         

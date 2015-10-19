@@ -3,7 +3,7 @@
 # Details may be found in the autofs(5) manpage
 
 #cd     -fstype=iso9660,ro,nosuid,nodev :/dev/cdrom
-*       -fstype=nfs     ldap1.local.com:/home/&
+/home   -fstype=glusterfs,backupvolfile-server=ldap2 ldap1:/sysvol
 
 # the following entries are samples to pique your imagination
 #linux      -ro,soft,intr       ftp.example.org:/pub/linux
