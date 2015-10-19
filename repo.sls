@@ -7,7 +7,12 @@ epel:
 gluster:
     pkgrepo.managed:
         - humanname: Gluster-epel
-        - mirrorlist: http://download.gluster.org/pub/gluster/glusterfs/3.6/LATEST/EPEL.repo/epel-$releasever/$basearch/
+        - baseurl: http://download.gluster.org/pub/gluster/glusterfs/3.6/LATEST/EPEL.repo/epel-$releasever/$basearch/
         - gpgcheck: 0
 
 
+gluster-noarch:
+    pkgrepo.managed:
+        - humanname: Gluster-noarch-epel
+        - baseurl: http://download.gluster.org/pub/gluster/glusterfs/3.6/LATEST/EPEL.repo/epel-$releasever/noarch
+        - gpgcheck: 0
