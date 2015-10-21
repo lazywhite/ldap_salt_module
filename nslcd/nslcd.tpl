@@ -28,7 +28,7 @@
 #scope base
 
 # Customize certain database lookups.
-base   group  ou=Groups,dc=local,dc=com
+base   group  ou=Group,dc=local,dc=com
 base   passwd ou=People,dc=local,dc=com
 base   shadow ou=People,dc=local,dc=com
 #scope  group  onelevel
